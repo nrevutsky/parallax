@@ -1,0 +1,119 @@
+/* ==|====================
+   Module/Global
+   ======================= */
+
+/*===titles===*/
+.title-usual{
+    position: relative;
+    display: inline-block;
+    font-family: $font1;
+    font-weight: bold;
+    @include fluidFontSize(22px,60px,480px,1680px,64px,32px);
+    h1,h2,h3,h4{
+        font-weight: bold;
+    }
+}
+.title-usual{
+    p{
+        font-family: $font1;
+        font-weight: 300;
+        @include fluidFontSize(16px,36px,480px,1680px,64px,24px);
+    }
+}
+.title-space{
+    h1,h2,h3,h4{
+        background-color: #fff;
+        @include ptr(padding,0 20);
+        position: relative;
+        z-index: 2;
+    }
+}
+.overall-title{
+    display: inline-block;
+    font-family: $font1;
+    font-weight: bold;
+    @include fluidFontSize(18px,36px,480px,1680px,40px,24px);
+    background-color: #fff;
+    @include ptr(padding,0 0 35 0);
+    @include ptr(margin,0 0 25 0);
+    text-transform: uppercase;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include ptr(width,70);
+        height: 1px;
+        background-color: $color2;
+    }
+    h1,h2,h3,h4{
+        font-weight: bold;
+    }
+}
+.title-form{
+    display: inline-block;
+    font-family: $font1;
+    font-weight: bold;
+    @include fluidFontSize(18px,32px,480px,1680px,36px,16px);
+    @include ptr(margin,0 0 30 0);
+    h3{
+        font-weight: bold;
+    }
+}
+
+
+/*effects*/
+
+.fade-show,
+.js-fade-in{
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: $linear;
+}
+.fade-bshow {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: $linear;
+}
+.fade-lshow{
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: $linear;
+}
+.fade-rshow{
+    transform: translateX(50px);
+    opacity: 0;
+    transition: $linear;
+}
+.fade-out{
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: $linear;
+}
+.fade-in{
+    transform: translateY(0);
+    opacity: 1;
+    transition: $linear;
+}
+
+.fade-lin{
+    transform: translateX(0);
+    opacity: 1;
+    transition: $linear;
+}
+.fade-rin{
+    transform: translateX(0);
+    opacity: 1;
+    transition: $linear;
+}
+
+.unseen > *{
+    opacity: 0;
+    transition: $linear;
+}
+
+.seen > *{
+    opacity: 1;
+    transition: $linear;
+}

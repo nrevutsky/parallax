@@ -1,0 +1,62 @@
+/* ==|====================
+   Layout/Header
+   ======================= */
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    /*@include ptr(padding,35 50);*/
+    @include ptr(padding,15 50);
+    display: flex;
+    justify-content: space-between;
+    z-index: 9999;
+    transition: $linear;
+    &.active {
+        /*padding: 15px 15px 0;*/
+        .logo {
+            /*width: 100px;*/
+        }
+        .login{
+            a {
+                /*@include ptr(height,40);
+                @include ptr(line-height,40);
+                @include ptr(font-size,20);*/
+            }
+        }
+    }
+}
+.login,
+.logo{
+    margin: auto 0;
+    transition: $linear;
+}
+.logo{
+    @include ptr(width,120);
+}
+.login{
+    a{
+        font-family: $font1;
+        font-weight: 400;
+        @include ptr(height,40);
+        @include ptr(line-height,40);
+        @include ptr(font-size,20);
+        @include ptr(width,140);
+        /*@include ptr(font-size,24);
+        @include ptr(width,170);
+        @include ptr(height,60);
+        @include ptr(line-height,60);*/
+        border: 1px solid $color2;
+        @include ptr(border-radius,35);
+        text-transform: uppercase;
+        text-align: center;
+        color: $color2;
+        display: block;
+        &:hover{
+            background-color: $color2;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}

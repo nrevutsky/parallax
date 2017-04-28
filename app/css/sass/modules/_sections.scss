@@ -1,0 +1,433 @@
+/* ==|====================
+   Module/Sections
+   ======================= */
+
+section{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    .container,
+    .all-container{
+        position: relative;
+        height: 100%;
+    }
+}
+.all-container{
+    @include ptr(padding,0 50);
+}
+/*===SECTION-1===*/
+#section1{
+    svg{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+.preview-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    .title-usual,
+    .preview-text{
+        @include ptr(margin,50 0 0 0);
+    }
+}
+.preview-text{
+    @include ptr(width,600);
+    font-family: $font1;
+    @include ptr(line-height,42);
+    span{
+        color: $color2;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+/*===SECTION-2===*/
+#section2{
+    overflow: hidden;
+    svg{
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        right: 0;
+    }
+}
+.ship-info{
+    /*display: flex;
+    height: 100%;*/
+    @include ptr(margin,100 0 0 0);
+    position: relative;
+    z-index: 2;
+    .title-usual{
+        margin: auto 0;
+    }
+}
+/*===SECTION-3===*/
+#section3{
+    display: flex;
+    @include ptr(padding,100 0 0 0);
+}
+#line1{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.cprocess-container{
+    position: relative;
+    margin: auto 0;
+    width: 100%;
+    line-height: 0;
+}
+.cprocess-title{
+    /*position: absolute;
+    top: -5%;
+    left: 10%;*/
+    margin: -2% 0 0 5%;
+}
+.cprocess-block{
+    /*position: absolute;
+    bottom: 0;
+    left: 0;*/
+    background-color: #fff;
+    position: relative;
+    @include ptr(padding,50 0);
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+.cprocess-slogan,
+.cprocess-info{
+    @include ptr(padding,0 100);
+    width: 50%;
+    p{
+        @include fluidFontSize(18px,48px,480px,1680px,62px,28px);
+    }
+}
+.cprocess-info{
+    h2{
+        @include ptr(margin,40 0 0 0);
+    }
+}
+#team{
+    /*position: absolute;
+    top: 10%;
+    left: 0;*/
+    position: relative;
+    background-color: #fff;
+    @include ptr(padding,0 60);
+    z-index: 2;
+    width: 100%;
+}
+
+/*===SECTION-4===*/
+#section4 {
+    text-align: center;
+    display: flex;
+    @include ptr(padding,100 0 0 0);
+}
+.company-container {
+    position: relative;
+    /*margin: auto 0;*/
+    width: 100%;
+    .title-usual{
+        background-color: #fff;
+        position: relative;
+        margin: -1% 0 0 0;
+        z-index: 2;
+        p{
+            font-weight: bold;
+        }
+    }
+}
+#line2{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.company-note{
+    @include ptr(margin,30 0 0 0);
+}
+.company-note-img{
+    position: relative;
+    display: inline-block;
+    max-width: 30%;
+}
+.logo-mini{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.company-slogan{
+    @include ptr(margin,30 0 0 0);
+    /*font-family: $font2;*/
+    @include fluidFontSize(18px,42px,480px,1680px,52px,32px);
+}
+.company-img{
+    /*position: relative;
+    margin: -15% 0 0 0;*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+/*===SECTION-5===*/
+#section5{
+    /*display: flex;*/
+    @include ptr(padding,100 0 0 0);
+}
+.process-container{
+    position: relative;
+    margin: auto 0;
+    width: 100%;
+}
+.process-title{
+    position: absolute;
+    top: -4%;
+    left: 5%;
+    /*@include ptr(padding,0 20);*/
+    background-color: #fff;
+    z-index: 2;
+}
+.process-svg-container{
+    position: relative;
+    overflow: hidden;
+}
+.process-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    img{
+        width: 26%;
+        margin: 5.3% 13% 0 0;
+    }
+}
+.process-analyze{
+    background-color: #ccc;
+}
+.process-list{
+    position: absolute;
+    @include ptr(top,150);
+    left: 5%;
+    width: 60%;
+    @include ptr(padding,0 20);
+    ol{
+        /*width: 60%;*/
+        width: 770px;
+    }
+    li{
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: $linear;
+        &.fade-in{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    p{
+        font-weight: bold;
+        @include fluidFontSize(16px,36px,480px,1680px,44px,26px);
+        @include ptr(margin-top,50);
+    }
+}
+/*===SECTION-6===*/
+#section6{
+    /*display: flex;*/
+    @include ptr(padding,100 0 0 0);
+}
+.features-container{
+    position: relative;
+    margin: auto 0;
+    width: 100%;
+}
+.features-title{
+    position: absolute;
+    @include ptr(top,-10);
+    left: 10%;
+    /*@include ptr(padding,0 20);*/
+    background-color: #fff;
+    z-index: 2;
+}
+.features-parent{
+    position: relative;
+    width: 90%;
+    margin: 100px auto 0;
+    margin: 10rem auto 0;
+    overflow: hidden;
+}
+.features-item{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &:first-child{
+        position: relative;
+    }
+}
+.features-img,
+.overall-block{
+    width: 50%;
+    margin: auto;
+    @include ptr(padding,0 50);
+}
+.overall-block{
+    span{
+        @include fluidFontSize(16px,30px,480px,1680px,34px,24px);
+        color: $color2;
+        display: block;
+    }
+}
+.overall-text{
+    @include fluidFontSize(16px,30px,480px,1680px,50px,24px);
+}
+
+/*===SECTION-7===*/
+#section7{
+    @include ptr(margin,70 0 0 0);
+    overflow: visible;
+    .container{
+        height: auto;
+    }
+    #line5{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .overall-block{
+        width: 575px;
+        margin: 10vw 0 0 0;
+        @include ptr(padding,0 20 30 0);
+        background-color: #fff;
+    }
+    .overall-title{
+        padding: 0;
+        &::before{
+            display: none;
+        }
+    }
+}
+.risk-container{
+    position: relative;
+    width: 100%;
+    padding: 0 0 12vw 0;
+}
+.risk-fcontainer{
+    width: 100%;
+    padding: 0 19vw;
+    position: relative;
+}
+.risk-title{
+    margin: 13.7vw 0 0 0;
+    h2{
+        @include ptr(padding,0 20);
+    }
+}
+.risk-parent{
+    @include ptr(margin,370 0 0);
+    position: relative;
+}
+.risk-info{
+    @include ptr(padding,20 0);
+    display: inline-block;
+}
+.risk-svg,
+.risk-info{
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
+.risk-svg{
+    @include ptr(margin,120 0 0 0);
+    width: 100%;
+    img{
+        box-shadow: 0px 8px 25px 0px rgba(0, 0, 0, 0.15);
+    }
+}
+.risk-info{
+    font-family: $font1;
+    font-weight: bold;
+    @include ptr(line-height,52);
+}
+.risk-info-text{
+    @include ptr(margin,25 0 0 0);
+    @include ptr(padding,0 20 0 0);
+    li{
+        display: block;
+        border-bottom: 1px solid #d8d8d8;
+        @include ptr(padding,5 0 5 40);
+        position: relative;
+        &:first-child{
+            border-top: 1px solid #d8d8d8;
+        }
+        &::before{
+            content: '\f067';
+            font-size: 18px;
+            color: $color1;
+            position: absolute;
+            @include ptr(top,7);
+            left: 0;
+            font-family: FontAwesome;
+        }
+    }
+}
+
+/*===SECTION-feedback===*/
+.feedback{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*@include ptr(margin,380 0);*/
+    height: 100vh;
+    @include ptr(margin,55 0 0 0);
+}
+.feedback-block,
+.feedback-form{
+    width: 390px;
+    margin: auto 0;
+}
+.feedback-logo{
+    @include ptr(margin,-25 0 0 0);
+}
+.feedback-info{
+    @include ptr(margin,50 0 0 0);
+    @include fluidFontSize(16px,26px,480px,1680px,36px,21px);
+}
+.feedback-socials{
+    @include ptr(margin,50 0 0 0);
+    display: flex;
+    a{
+        @include ptr(width,60);
+        @include ptr(margin,0 0 0 25);
+        @include ptr(height,60);
+        background-color: #eceff1;
+        color: #b0bec5;
+        display: flex;
+        border-radius: 50%;
+        text-align: center;
+        &:first-child{
+            margin: 0;
+        }
+        i{
+            margin: auto;
+        }
+        &:hover{
+            text-decoration: none;
+            background-color: $color2;
+            color: #fff;
+        }
+    }
+}
